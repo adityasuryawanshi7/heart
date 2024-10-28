@@ -3,25 +3,276 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="google-adsense-account" content="ca-pub-8434101671795770">
-    <title>HEART</title>
-    <link rel="stylesheet" href="style.css">
-    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8434101671795770"
-     crossorigin="anonymous"></script>
-     <script type='text/javascript' src='//pl22501809.profitablegatecpm.com/cc/80/d4/cc80d41e19e09742483c273af4564057.js'></script>
+    <title>Test Prep Planner</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #f9f9f9;
+            overflow: auto;
+            background:#AFEEEE;
+        }
+
+        .planner-container {
+            width: 220mm;
+            border: 6px solid black;
+            padding: 20px;
+            box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+            background-color: white;
+            position: relative;
+        }
+
+        .planner-title {
+            text-align: center;
+            font-size: 1.6em;
+            font-weight: bold;
+            font-family: 'Montserrat', sans-serif;
+            margin-bottom: 20px;
+            contenteditable: true; /* Make title editable */
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 0 auto;
+            table-layout: auto;
+        }
+
+        th, td {
+            border: 2px solid black;
+            text-align: center;
+            padding: 8px;
+            font-size: 1em;
+            word-wrap: break-word;
+            width: 70px;
+            contenteditable: true; /* Make all table cells and headers editable */
+        }
+
+        th {
+            background-color: white;
+        }
+
+        th:nth-child(6), td:nth-child(6) {
+            width: 120px;
+        }
+
+        th:nth-child(7), td:nth-child(7) {
+            width: 120px;
+        }
+
+        .subject {
+            font-weight: bold;
+            text-align: left;
+            padding-left: 10px;
+        }
+
+        .highlight {
+            font-style: italic;
+        }
+
+        .revision {
+            font-style: italic;
+        }
+
+        .side-text {
+            text-align: center;
+            font-size: 0.9em;
+            font-weight: bold;
+        }
+
+        .side-cell {
+            width: 60px;
+            vertical-align: middle;
+        }
+
+        .confirm-button {
+            display: block;
+            margin: 20px auto 0;
+            padding: 10px 20px;
+            font-size: 1em;
+            background-color: #008080;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+            bottom: -100px;
+        }
+
+        .confirm-button:hover {
+            background-color: #0056b3;
+        }
+
+        /* New section for displaying stored data */
+        #stored-data {
+            margin-top: 220px;
+            font-size: 0.9em;
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            padding: 10px;
+            border: 2px solid #ccc;
+            max-height: 150px;
+            overflow-y: auto;
+            width: 220mm; /* Match the width of the planner */
+        }
+
+        @media only screen and (max-width: 600px) {
+            table {
+                font-size: 0.8em;
+            }
+        }
+    </style>
 </head>
-<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8434101671795770"
-     crossorigin="anonymous"></script>
 <body>
-    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8434101671795770"
-     crossorigin="anonymous"></script>
 
+    <div class="planner-container">
+        <div class="planner-title" id="planner-title" contenteditable="true">
+            UPCOMING TEST PREP. PLANNER (27 OCT.)
+        </div>
 
-     
-    <div class="text2">I  LOVE  YOU  KAJAL</div>
-    <img src="https://t4.ftcdn.net/jpg/03/21/20/29/240_F_321202913_DwCToTkg5g5UIgReKbFWlIA10cYWhXCk.jpg" id="img">
-    <div class="text1">Hey, this is for you...</div>
-    <img src="https://www.bing.com/th?id=OIP.NXY9R7SvLRRk99GLBEb5WQHaGu&w=150&h=136&c=8&rs=1&qlt=90&o=6&dpr=1.3&pid=3.1&rm=2" id="img2">
-   
+        <table id="planner-table">
+            <tr>
+                <th contenteditable="true">No. of Questions</th>
+                <th contenteditable="true">Date --> Subject</th>
+                <th contenteditable="true">21</th>
+                <th contenteditable="true">22</th>
+                <th contenteditable="true">23</th>
+                <th contenteditable="true">24</th>
+                <th contenteditable="true">25</th>
+                <th contenteditable="true">26</th>
+                <th contenteditable="true">27</th>
+            </tr>
+
+            <tr>
+                <td class="side-cell side-text" contenteditable="true">20 + 20</td>
+                <td class="subject" contenteditable="true">Physics</td>
+                <td contenteditable="true">electro-1 <br> <span class="highlight">unit-dimension</span></td>
+                <td contenteditable="true">optics <br> vectors</td>
+                <td contenteditable="true">gravitation <br> kinematics</td>
+                <td contenteditable="true">potential <br> friction <br> NLM</td>
+                <td contenteditable="true">Adv. after 2005</td>
+                <td contenteditable="true">Adv. after 2005</td>
+                <td class="revision" contenteditable="true">test</td>
+            </tr>
+
+            <tr>
+                <td class="side-cell side-text" contenteditable="true">25 + 25</td>
+                <td class="subject" contenteditable="true">Chemistry</td>
+                <td contenteditable="true">mole concept <br> <span class="highlight">chemical kinetics</span></td>
+                <td contenteditable="true">solution <br> chemical bonding</td>
+                <td contenteditable="true">solid state <br> periodic table</td>
+                <td contenteditable="true">thermodynamics</td>
+                <td contenteditable="true">Adv. after 2005</td>
+                <td contenteditable="true">Adv. after 2005</td>
+                <td class="revision" contenteditable="true">test</td>
+            </tr>
+
+            <tr>
+                <td class="side-cell side-text" contenteditable="true">15 + 15</td>
+                <td class="subject" contenteditable="true">Maths</td>
+                <td contenteditable="true">sets <br> trigonometry</td>
+                <td contenteditable="true">function <br> quadratic eq.</td>
+                <td contenteditable="true">sequence series <br> AOD</td>
+                <td contenteditable="true">ITF <br> LCD <br> MOD</td>
+                <td contenteditable="true">Adv. after 2005</td>
+                <td contenteditable="true">Adv. after 2005</td>
+                <td class="revision" contenteditable="true">test</td>
+            </tr>
+        </table>
+        
+        <button class="confirm-button" id="confirm-button">Save Changes</button>
+    </div>
+
+    <!-- Section for displaying previously saved data (moved outside the container) -->
+    <div id="stored-data">
+        <strong>Previous Data:</strong><br>
+    </div>
+
+    <script>
+        // Function to save table data to local storage, including title and dates
+        function saveTableData() {
+            const table = document.getElementById('planner-table');
+            const rows = Array.from(table.rows);
+            const data = rows.map(row => Array.from(row.cells).map(cell => cell.innerHTML));
+
+            // Save the title separately
+            const title = document.getElementById('planner-title').innerHTML;
+
+            // Save the title and data
+            localStorage.setItem('plannerTitle', title);
+            localStorage.setItem('plannerData', JSON.stringify(data));
+
+            // Save current data as "previousData" before overwriting
+            const previousData = localStorage.getItem('plannerData');
+            if (previousData) {
+                localStorage.setItem('previousData', previousData);
+            }
+        }
+
+        // Function to load table data from local storage, including title and dates
+        function loadTableData() {
+            const title = localStorage.getItem('plannerTitle');
+            if (title) {
+                document.getElementById('planner-title').innerHTML = title;
+            }
+
+            const data = localStorage.getItem('plannerData');
+            if (data) {
+                const table = document.getElementById('planner-table');
+                const rows = JSON.parse(data);
+                rows.forEach((row, rowIndex) => {
+                    row.forEach((cell, cellIndex) => {
+                        if (table.rows[rowIndex]) {
+                            table.rows[rowIndex].cells[cellIndex].innerHTML = cell;
+                        }
+                    });
+                });
+            }
+        }
+
+        // Function to display the previously saved data (1-step lag)
+        function displayPreviousData() {
+            const data = localStorage.getItem('previousData');
+            if (data) {
+                const rows = JSON.parse(data);
+                let previousData = '';
+
+                rows.forEach(row => {
+                    row.forEach(cell => {
+                        previousData += cell + ' | ';
+                    });
+                    previousData += '<br>';
+                });
+
+                document.getElementById('stored-data').innerHTML = '<strong>Previous Data:</strong><br>' + previousData;
+            } else {
+                document.getElementById('stored-data').innerHTML = '<strong>Previous Data:</strong><br>No previous data available.';
+            }
+        }
+
+        // Confirm changes and save data
+        document.getElementById('confirm-button').addEventListener('click', function() {
+            if (confirm("Are you sure you want to save the changes?")) {
+                saveTableData();
+                displayPreviousData(); // Update the display with the previously saved data
+                alert("Changes saved successfully!");
+            }
+        });
+
+        // Load data on page load and display the previous data
+        window.onload = function() {
+            loadTableData(); // Load the current data into the table
+            displayPreviousData(); // Display the previously saved data (1-step lag)
+        };
+    </script>
 </body>
 </html>
